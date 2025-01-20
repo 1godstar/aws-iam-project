@@ -1,0 +1,67 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*",
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:TerminateInstances",
+                "ec2:CreateTags",
+                "ec2:CreateSecurityGroup",
+                "ec2:DeleteSecurityGroup",
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject",
+                "lambda:InvokeFunction",
+                "lambda:CreateFunction",
+                "lambda:UpdateFunctionCode",
+                "rds:DescribeDBInstances",
+                "rds:CreateDBInstance",
+                "rds:ModifyDBInstance",
+                "rds:DeleteDBInstance",
+                "cloudwatch:PutMetricData",
+                "cloudwatch:DescribeAlarms",
+                "cloudtrail:DescribeTrails",
+                "cloudtrail:LookupEvents"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": [
+                "iam:*",
+                "billing:*",
+                "ec2:CreateVpc",
+                "ec2:DeleteVpc",
+                "ec2:ModifyVpcAttribute",
+                "ec2:CreateInternetGateway",
+                "ec2:DeleteInternetGateway",
+                "ec2:AttachInternetGateway",
+                "ec2:DetachInternetGateway",
+                "ec2:CreateRouteTable",
+                "ec2:DeleteRouteTable",
+                "ec2:CreateNatGateway",
+                "ec2:DeleteNatGateway",
+                "ec2:ModifyVpcPeeringConnectionOptions",
+                "ec2:CreateVpcPeeringConnection",
+                "ec2:DeleteVpcPeeringConnection",
+                "ec2:AcceptVpcPeeringConnection",
+                "ec2:RejectVpcPeeringConnection",
+                "ec2:CreateCustomerGateway",
+                "ec2:CreateVpnConnection",
+                "ec2:DeleteVpnConnection",
+                "ec2:CreateVpnGateway",
+                "ec2:DeleteVpnGateway",
+                "ec2:ModifyVpnConnection",
+                "ec2:EnableVpcClassicLink",
+                "ec2:DisableVpcClassicLink",
+                "cloudformation:*",
+                "redshift:*",
+                "organizations:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
