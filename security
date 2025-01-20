@@ -1,0 +1,46 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListUsers",
+                "iam:ListRoles",
+                "iam:GetUser",
+                "iam:GetRole",
+                "cloudtrail:DescribeTrails",
+                "cloudtrail:LookupEvents",
+                "guardduty:ListFindings",
+                "guardduty:GetFindings",
+                "config:DescribeConfigRules",
+                "config:GetComplianceDetailsByConfigRule",
+                "config:ListDiscoveredResources",
+                "config:GetResourceConfigHistory",
+                "securityhub:DescribeStandards",
+                "securityhub:GetFindings",
+                "cloudwatch:DescribeAlarms",
+                "cloudwatch:GetDashboard",
+                "cloudwatch:GetMetricData"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": [
+                "iam:CreateUser",
+                "iam:DeleteUser",
+                "iam:UpdateUser",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:DetachRolePolicy",
+                "guardduty:CreateDetector",
+                "guardduty:DeleteDetector",
+                "config:PutConfigRule",
+                "config:DeleteConfigRule",
+                "securityhub:BatchImportFindings"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
